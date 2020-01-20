@@ -1,4 +1,3 @@
-# PROJECT TITLE
+# Exploring scalatest
 
-PROJECT DESCRIPTION
-
+code samples for scalactic and scalatest
