@@ -3,7 +3,7 @@ package guide.ch08fixtures
 import org.scalatest._
 import java.io.File
 
-class WithFixtureExampleSpec extends flatspec.AnyFlatSpec {
+class Ex03WithFixtureExampleSpec extends flatspec.AnyFlatSpec {
 
   override def withFixture(test: NoArgTest) = {
 

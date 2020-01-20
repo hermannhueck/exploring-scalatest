@@ -3,32 +3,28 @@ package guide.ch08fixtures
 import org.scalatest._
 import collection.mutable.ListBuffer
 
-trait Builder2 extends BeforeAndAfterEach { this: Suite =>
+trait Builder extends TestSuiteMixin { this: TestSuite =>
 
   val builder = new StringBuilder
 
-  override def beforeEach() = {
+  abstract override def withFixture(test: NoArgTest) = {
     builder.append("ScalaTest is ")
-    super.beforeEach() // To be stackable, must call super.beforeEach
-  }
-
-  override def afterEach() = {
-    try super.afterEach() // To be stackable, must call super.afterEach
+    try super.withFixture(test) // To be stackable, must call super.withFixture
     finally builder.clear()
   }
 }
 
-trait Buffer2 extends BeforeAndAfterEach { this: Suite =>
+trait Buffer extends TestSuiteMixin { this: TestSuite =>
 
   val buffer = new ListBuffer[String]
 
-  override def afterEach() = {
-    try super.afterEach() // To be stackable, must call super.afterEach
+  abstract override def withFixture(test: NoArgTest) = {
+    try super.withFixture(test) // To be stackable, must call super.withFixture
     finally buffer.clear()
   }
 }
 
-class BeforeAndAfterEachExampleSpec extends flatspec.AnyFlatSpec with Builder2 with Buffer2 {
+class Ex07StackingTraitsExampleSpec extends flatspec.AnyFlatSpec with Builder with Buffer {
 
   "Testing" should "be easy" in {
     builder.append("easy!")

@@ -3,7 +3,7 @@ package guide.ch08fixtures
 import org.scalatest._
 import collection.mutable.ListBuffer
 
-class FixtureContextExampleSpec extends flatspec.AnyFlatSpec {
+class Ex02FixtureContextExampleSpec extends flatspec.AnyFlatSpec {
 
   trait Builder {
     val builder = new StringBuilder("ScalaTest is ")

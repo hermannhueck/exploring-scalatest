@@ -25,7 +25,7 @@ import DbServer._
 import java.util.UUID.randomUUID
 import java.io._
 
-class LoanFixtureExampleSpec extends flatspec.AnyFlatSpec {
+class Ex04LoanFixtureExampleSpec extends flatspec.AnyFlatSpec {
 
   def withDatabase(testCode: Db => Any) = {
     val dbName = randomUUID.toString

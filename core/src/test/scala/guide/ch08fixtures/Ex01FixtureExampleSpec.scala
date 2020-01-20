@@ -3,7 +3,7 @@ package guide.ch08fixtures
 import org.scalatest._
 import collection.mutable.ListBuffer
 
-class FixtureExampleSpec extends flatspec.AnyFlatSpec {
+class Ex01FixtureExampleSpec extends flatspec.AnyFlatSpec {
 
   import scala.language.reflectiveCalls
 

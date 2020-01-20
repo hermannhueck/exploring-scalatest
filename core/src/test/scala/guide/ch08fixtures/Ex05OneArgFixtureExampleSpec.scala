@@ -3,7 +3,7 @@ package guide.ch08fixtures
 import org.scalatest._
 import java.io._
 
-class OneArgFixtureExampleSpec extends flatspec.FixtureAnyFlatSpec {
+class Ex05OneArgFixtureExampleSpec extends flatspec.FixtureAnyFlatSpec {
 
   case class FixtureParam(file: File, writer: FileWriter)
 
