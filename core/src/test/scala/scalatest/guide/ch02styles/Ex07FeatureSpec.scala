@@ -1,4 +1,4 @@
-package guide.ch02styles
+package scalatest.guide.ch02styles
 
 // Trait FeatureSpec is primarily intended for acceptance testing, including facilitating the process
 // of programmers working alongside non-programmers to define the acceptance requirements.

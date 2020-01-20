@@ -1,4 +1,4 @@
-package guide.ch05assertions
+package scalatest.guide.ch05assertions
 
 import org.scalatest._
 import org.scalatest.exceptions.TestFailedException

@@ -1,4 +1,4 @@
-package guide.ch02styles
+package scalatest.guide.ch02styles
 
 // Because it gives absolute freedom (and no guidance) on how specification text
 // should be written, FreeSpec is a good choice for teams experienced with BDD

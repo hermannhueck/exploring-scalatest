@@ -1,4 +1,4 @@
-package guide.ch02styles
+package scalatest.guide.ch02styles
 
 // For teams coming from Ruby's RSpec tool, FunSpec will feel very familiar;
 // More generally, for any team that prefers BDD, FunSpec's nesting and gentle guide

@@ -1,4 +1,4 @@
-package guide.ch08fixtures
+package scalatest.guide.ch08fixtures
 
 import org.scalatest._
 import java.io.File

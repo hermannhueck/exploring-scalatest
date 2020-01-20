@@ -1,4 +1,4 @@
-package guide.ch02styles
+package scalatest.guide.ch02styles
 
 // RefSpec allows you to define tests as methods, which saves one function literal per test
 // compared to style classes that represent tests as functions. Fewer function literals translates

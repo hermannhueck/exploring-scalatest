@@ -1,4 +1,4 @@
-package guide.ch02styles
+package scalatest.guide.ch02styles
 
 // For teams coming from specs or specs2, WordSpec will feel familiar,
 // and is often the most natural way to port specsN tests to ScalaTest.

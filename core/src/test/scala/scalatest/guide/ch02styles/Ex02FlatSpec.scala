@@ -1,4 +1,4 @@
-package guide.ch02styles
+package scalatest.guide.ch02styles
 
 // A good first step for teams wishing to move from xUnit to BDD, FlatSpec's structure is flat
 // like xUnit, so simple and familiar, but the test names must be written in a specification style:

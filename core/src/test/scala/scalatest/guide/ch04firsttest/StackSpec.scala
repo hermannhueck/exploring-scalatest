@@ -1,4 +1,4 @@
-package guide.ch04firsttest
+package scalatest.guide.ch04firsttest
 
 import collection.mutable.Stack
 import org.scalatest._

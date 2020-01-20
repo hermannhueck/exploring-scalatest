@@ -1,4 +1,4 @@
-package guide.ch02styles
+package scalatest.guide.ch02styles
 
 // For teams coming from xUnit, FunSuite feels comfortable and familiar while still giving
 // some of the benefits of BDD: FunSuite makes it easy to write descriptive test names,

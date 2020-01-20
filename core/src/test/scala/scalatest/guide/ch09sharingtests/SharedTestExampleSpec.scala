@@ -1,4 +1,4 @@
-package guide.ch09sharingtests
+package scalatest.guide.ch09sharingtests
 
 import org.scalatest._
 

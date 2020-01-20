@@ -1,4 +1,4 @@
-package guide.ch08fixtures
+package scalatest.guide.ch08fixtures
 
 import java.util.concurrent.ConcurrentHashMap
 

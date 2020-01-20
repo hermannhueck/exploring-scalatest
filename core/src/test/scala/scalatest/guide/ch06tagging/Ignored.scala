@@ -1,4 +1,4 @@
-package guide.ch06tagging
+package scalatest.guide.ch06tagging
 
 import collection.mutable.Stack
 import org.scalatest._
