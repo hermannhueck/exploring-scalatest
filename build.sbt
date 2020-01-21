@@ -18,11 +18,11 @@ inThisBuild(
     libraryDependencies ++= Seq(
       collectionCompat,
       scalactic,
+      scalaTest,
+      scalaTestPlus,
       shapeless,
       catsEffect
     ) ++ Seq(
-      scalaTest,
-      scalaTestPlus,
       scalaCheck,
       scalaCheckShapeless
     ).map(_ % Test),
