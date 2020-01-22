@@ -5,7 +5,7 @@ object Dependencies {
   val collectionCompatVersion    = "2.1.3"
   val shapelessVersion           = "2.3.3"
   val catsVersion                = "2.0.0"
-  val fs2Version                 = "2.2.0"
+  val fs2Version                 = "2.2.1"
   val zioVersion                 = "1.0.0-RC17"
   val scalaTestVersion           = "3.1.0"
   val scalaCheckVersion          = "1.14.3"
