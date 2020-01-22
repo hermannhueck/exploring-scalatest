@@ -34,7 +34,7 @@ object Ch03ConstrainedEquality extends util.App {
   (1L === (1: AnyVal))
     .ensuring(_ == true) pipe println
 
-  // ConversionCheckedTripleEquals no longer available in scalactix 3.1.0
+  // ConversionCheckedTripleEquals no longer available in scalactic 3.1.0
   /*
   import ConversionCheckedTripleEquals._
 

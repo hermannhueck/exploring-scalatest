@@ -20,7 +20,7 @@ object Ch06ExplicitlyDSL extends util.App {
   // In tests:
   result should equal("hello")(decided by defaultEquality)
 
-  val result2 = "HELLO"
+  val result2 = "HELLO   "
 
   "together with StringNormalizations ..." pipe println
   import StringNormalizations._
