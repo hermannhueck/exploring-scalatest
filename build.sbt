@@ -19,12 +19,12 @@ inThisBuild(
       collectionCompat,
       scalactic,
       scalaTest,
-      scalaTestPlus,
       scalaMock,
       shapeless,
       catsEffect
     ) ++ Seq(
       scalaCheck,
+      scalaTestPlusCheck,
       scalaCheckShapeless
     ).map(_ % Test),
     Test / parallelExecution := false,
@@ -33,7 +33,6 @@ inThisBuild(
     initialCommands :=
       s"""|
           |import scala.util.chaining._
-          |import util.syntax.pipe._
           |println
           |""".stripMargin // initialize REPL
   )

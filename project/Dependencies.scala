@@ -23,7 +23,7 @@ object Dependencies {
   val zioTestSbt          = "dev.zio"                    %% "zio-test-sbt"              % zioVersion
   val scalactic           = "org.scalactic"              %% "scalactic"                 % scalaTestVersion
   val scalaTest           = "org.scalatest"              %% "scalatest"                 % scalaTestVersion
-  val scalaTestPlus       = "org.scalatestplus"          %% "scalatestplus-scalacheck"  % "3.1.0.0-RC2"
+  val scalaTestPlusCheck  = "org.scalatestplus"          %% "scalatestplus-scalacheck"  % "3.1.0.0-RC2"
   val scalaMock           = "org.scalamock"              %% "scalamock"                 % scalaMockVersion
   val scalaCheck          = "org.scalacheck"             %% "scalacheck"                % scalaCheckVersion
   val scalaCheckShapeless = "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % scalaCheckShapelessVersion
