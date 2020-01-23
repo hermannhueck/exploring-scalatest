@@ -20,6 +20,7 @@ inThisBuild(
       scalactic,
       scalaTest,
       scalaTestPlus,
+      scalaMock,
       shapeless,
       catsEffect
     ) ++ Seq(
