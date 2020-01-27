@@ -25,7 +25,9 @@ inThisBuild(
     ) ++ Seq(
       scalaCheck,
       scalaTestPlusCheck,
-      scalaCheckShapeless
+      scalaCheckShapeless,
+      seleniumJava,
+      seleniumFirefox
     ).map(_ % Test),
     Test / parallelExecution := false,
     // S = Small Stack Traces, D = print Duration

@@ -11,6 +11,7 @@ object Dependencies {
   val scalaMockVersion           = "4.4.0"
   val scalaCheckVersion          = "1.14.3"
   val scalaCheckShapelessVersion = "1.2.3"
+  val seleniumVersion            = "3.141.59"
 
   val collectionCompat    = "org.scala-lang.modules"     %% "scala-collection-compat"   % collectionCompatVersion
   val shapeless           = "com.chuusai"                %% "shapeless"                 % shapelessVersion
@@ -27,4 +28,8 @@ object Dependencies {
   val scalaMock           = "org.scalamock"              %% "scalamock"                 % scalaMockVersion
   val scalaCheck          = "org.scalacheck"             %% "scalacheck"                % scalaCheckVersion
   val scalaCheckShapeless = "com.github.alexarchambault" %% "scalacheck-shapeless_1.14" % scalaCheckShapelessVersion
+  val seleniumJava        = "org.seleniumhq.selenium"    % "selenium-java"              % seleniumVersion
+  val seleniumHtmlunit    = "org.seleniumhq.selenium"    % "selenium-htmlunit-driver"   % seleniumVersion
+  val seleniumFirefox     = "org.seleniumhq.selenium"    % "selenium-firefox-driver"    % seleniumVersion
+  val seleniumChrome      = "org.seleniumhq.selenium"    % "selenium-chrome-driver"     % seleniumVersion
 }
