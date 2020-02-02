@@ -20,10 +20,10 @@ inThisBuild(
       scalactic,
       scalaTest,
       scalaMock,
+      scalaCheck,
       shapeless,
       catsEffect
     ) ++ Seq(
-      scalaCheck,
       scalaTestPlusCheck,
       scalaCheckShapeless,
       seleniumJava,
