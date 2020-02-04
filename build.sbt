@@ -19,6 +19,7 @@ inThisBuild(
       collectionCompat,
       scalactic,
       scalaTest,
+      scalaTestApp,
       scalaMock,
       scalaCheck,
       shapeless,

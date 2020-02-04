@@ -4,13 +4,13 @@ object Dependencies {
 
   val collectionCompatVersion    = "2.1.3"
   val shapelessVersion           = "2.3.3"
-  val catsVersion                = "2.0.0"
-  val fs2Version                 = "2.2.1"
+  val catsVersion                = "2.1.0"
+  val fs2Version                 = "2.2.2"
   val zioVersion                 = "1.0.0-RC17"
   val scalaTestVersion           = "3.1.0"
   val scalaMockVersion           = "4.4.0"
   val scalaCheckVersion          = "1.14.3"
-  val scalaCheckShapelessVersion = "1.2.3"
+  val scalaCheckShapelessVersion = "1.2.4"
   val seleniumVersion            = "3.141.59"
 
   val collectionCompat    = "org.scala-lang.modules"     %% "scala-collection-compat"   % collectionCompatVersion
@@ -24,6 +24,7 @@ object Dependencies {
   val zioTestSbt          = "dev.zio"                    %% "zio-test-sbt"              % zioVersion
   val scalactic           = "org.scalactic"              %% "scalactic"                 % scalaTestVersion
   val scalaTest           = "org.scalatest"              %% "scalatest"                 % scalaTestVersion
+  val scalaTestApp        = "org.scalatest"              %% "scalatest-app"             % scalaTestVersion
   val scalaTestPlusCheck  = "org.scalatestplus"          %% "scalatestplus-scalacheck"  % "3.1.0.0-RC2"
   val scalaMock           = "org.scalamock"              %% "scalamock"                 % scalaMockVersion
   val scalaCheck          = "org.scalacheck"             %% "scalacheck"                % scalaCheckVersion
