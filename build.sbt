@@ -22,20 +22,33 @@ inThisBuild(
       scalaTestApp,
       scalaMock,
       scalaCheck,
+      scalaCheckDatetime,
       shapeless,
-      catsEffect
+      catsEffect,
+      silencerLib,
+      silencerPlugin,
+      kindProjectorPlugin,
+      betterMonadicForPlugin
     ) ++ Seq(
       scalaTestPlusCheck,
       scalaCheckShapeless,
       seleniumJava,
-      seleniumFirefox
+      seleniumFirefox,
+      munit,
+      utest
     ).map(_ % Test),
     Test / parallelExecution := false,
     // S = Small Stack Traces, D = print Duration
     Test / testOptions += Tests.Argument(TestFrameworks.ScalaTest, "-oSD"),
+    // run 100 tests for each property // -s = -minSuccessfulTests
+    Test / testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-s", "100"),
+    testFrameworks += new TestFramework("munit.Framework"),
+    testFrameworks += new TestFramework("utest.runner.Framework"),
     initialCommands :=
       s"""|
           |import scala.util.chaining._
+          |import org.scalatest._
+          |import org.scalacheck._
           |println
           |""".stripMargin // initialize REPL
   )
@@ -87,8 +100,3 @@ lazy val util = (project in file("util"))
     buildInfoPackage := "build",
     scalacOptions ++= scalacOptionsFor(scalaVersion.value)
   )
-
-// https://github.com/typelevel/kind-projector
-addCompilerPlugin("org.typelevel" % "kind-projector" % "0.11.0" cross CrossVersion.full)
-// https://github.com/oleg-py/better-monadic-for
-addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1")
