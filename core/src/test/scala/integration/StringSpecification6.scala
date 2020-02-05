@@ -8,13 +8,15 @@ package integration
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatestplus.scalacheck.ScalaCheckPropertyChecks
 import org.scalatest.matchers.should.Matchers
-import org.scalacheck.Arbitrary
-import org.scalacheck.Gen
 
 class StringSpecification6 extends AnyFlatSpec with ScalaCheckPropertyChecks with Matchers {
 
   "Two concatenated strings" should "start with the first string" in {
+
+    import org.scalacheck.Arbitrary
+    import org.scalacheck.Gen
     val gen: Gen[String] = Arbitrary.arbitrary[String]
+
     forAll(gen -> "first", gen -> "second") { (a: String, b: String) =>
       (a + b) should startWith(a)
     }
