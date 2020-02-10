@@ -14,6 +14,7 @@ object Dependencies {
   lazy val scalaCheckDatetimeVersion  = "0.3.2"
   lazy val seleniumVersion            = "3.141.59"
   lazy val munitVersion               = "0.4.4"
+  lazy val minitestVersion            = "2.7.0"
   lazy val utestVersion               = "0.7.4"
   lazy val fansiVersion               = "0.2.9"
 
@@ -39,6 +40,7 @@ object Dependencies {
   lazy val seleniumFirefox     = "org.seleniumhq.selenium"    % "selenium-firefox-driver"      % seleniumVersion
   lazy val seleniumChrome      = "org.seleniumhq.selenium"    % "selenium-chrome-driver"       % seleniumVersion
   lazy val munit               = "org.scalameta"              %% "munit"                       % munitVersion
+  lazy val minitest            = "io.monix"                   %% "minitest"                    % minitestVersion
   lazy val utest               = "com.lihaoyi"                %% "utest"                       % utestVersion
   lazy val fansi               = "com.lihaoyi"                %% "fansi"                       % fansiVersion
 

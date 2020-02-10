@@ -38,7 +38,13 @@ inThisBuild(
 )
 
 lazy val root = (project in file("."))
-  .aggregate(`exploring-scalatest`, `exploring-scalacheck`, `integration-scalatest-scalacheck`, `exploring-utest`)
+  .aggregate(
+    `exploring-scalatest`,
+    `exploring-scalacheck`,
+    `integration-scalatest-scalacheck`,
+    `exploring-utest`,
+    `exploring-minitest`
+  )
   .settings(
     name := projectName,
     description := projectDescription,
@@ -102,6 +108,17 @@ lazy val `exploring-utest` = (project in file("exploring-utest"))
       fansi
     ),
     testFrameworks += new TestFramework("utest.runner.Framework"),
+    scalacOptions ++= scalacOptionsFor(scalaVersion.value),
+    console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
+  )
+
+lazy val `exploring-minitest` = (project in file("exploring-minitest"))
+  .dependsOn(compat213, util)
+  .settings(
+    name := "exploring-minitest",
+    description := "Exploring minitest",
+    libraryDependencies ++= Seq(minitest),
+    testFrameworks += new TestFramework("minitest.runner.Framework"),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),
     console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
   )
