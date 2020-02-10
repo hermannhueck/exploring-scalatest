@@ -41,6 +41,7 @@ object Dependencies {
   lazy val seleniumChrome      = "org.seleniumhq.selenium"    % "selenium-chrome-driver"       % seleniumVersion
   lazy val munit               = "org.scalameta"              %% "munit"                       % munitVersion
   lazy val minitest            = "io.monix"                   %% "minitest"                    % minitestVersion
+  lazy val minitestLaws        = "io.monix"                   %% "minitest-laws"               % minitestVersion
   lazy val utest               = "com.lihaoyi"                %% "utest"                       % utestVersion
   lazy val fansi               = "com.lihaoyi"                %% "fansi"                       % fansiVersion
 

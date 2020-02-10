@@ -117,7 +117,10 @@ lazy val `exploring-minitest` = (project in file("exploring-minitest"))
   .settings(
     name := "exploring-minitest",
     description := "Exploring minitest",
-    libraryDependencies ++= Seq(minitest),
+    libraryDependencies ++= Seq(
+      minitest,
+      minitestLaws
+    ),
     testFrameworks += new TestFramework("minitest.runner.Framework"),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),
     console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
