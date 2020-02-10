@@ -97,7 +97,10 @@ lazy val `exploring-utest` = (project in file("exploring-utest"))
   .settings(
     name := "exploring-utest",
     description := "Exploring utest",
-    libraryDependencies ++= Seq(utest),
+    libraryDependencies ++= Seq(
+      utest,
+      fansi
+    ),
     testFrameworks += new TestFramework("utest.runner.Framework"),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),
     console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)

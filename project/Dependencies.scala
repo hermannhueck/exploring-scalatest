@@ -15,6 +15,7 @@ object Dependencies {
   lazy val seleniumVersion            = "3.141.59"
   lazy val munitVersion               = "0.4.4"
   lazy val utestVersion               = "0.7.3"
+  lazy val fansiVersion               = "0.2.7"
 
   lazy val collectionCompat    = "org.scala-lang.modules"     %% "scala-collection-compat"     % collectionCompatVersion
   lazy val shapeless           = "com.chuusai"                %% "shapeless"                   % shapelessVersion
@@ -39,6 +40,7 @@ object Dependencies {
   lazy val seleniumChrome      = "org.seleniumhq.selenium"    % "selenium-chrome-driver"       % seleniumVersion
   lazy val munit               = "org.scalameta"              %% "munit"                       % munitVersion
   lazy val utest               = "com.lihaoyi"                %% "utest"                       % utestVersion
+  lazy val fansi               = "com.lihaoyi"                %% "fansi"                       % fansiVersion
 
   // compilerPlugins
   lazy val silencerVersion         = "1.4.4"
