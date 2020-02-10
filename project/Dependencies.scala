@@ -11,11 +11,11 @@ object Dependencies {
   lazy val scalaMockVersion           = "4.4.0"
   lazy val scalaCheckVersion          = "1.14.3"
   lazy val scalaCheckShapelessVersion = "1.2.4"
-  lazy val scalaCheckDatetimeVersion  = "0.3.1"
+  lazy val scalaCheckDatetimeVersion  = "0.3.2"
   lazy val seleniumVersion            = "3.141.59"
   lazy val munitVersion               = "0.4.4"
-  lazy val utestVersion               = "0.7.3"
-  lazy val fansiVersion               = "0.2.7"
+  lazy val utestVersion               = "0.7.4"
+  lazy val fansiVersion               = "0.2.9"
 
   lazy val collectionCompat    = "org.scala-lang.modules"     %% "scala-collection-compat"     % collectionCompatVersion
   lazy val shapeless           = "com.chuusai"                %% "shapeless"                   % shapelessVersion
