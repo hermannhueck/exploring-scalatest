@@ -17,26 +17,11 @@ inThisBuild(
     publish / skip := true,
     libraryDependencies ++= Seq(
       collectionCompat,
-      scalactic,
-      scalaTest,
-      scalaTestApp,
-      scalaMock,
-      scalaCheck,
-      scalaCheckDatetime,
-      shapeless,
-      catsEffect,
       silencerLib,
       silencerPlugin,
       kindProjectorPlugin,
       betterMonadicForPlugin
-    ) ++ Seq(
-      scalaTestPlusCheck,
-      scalaCheckShapeless,
-      seleniumJava,
-      seleniumFirefox,
-      munit,
-      utest
-    ).map(_ % Test),
+    ),
     Test / parallelExecution := false,
     // S = Small Stack Traces, D = print Duration
     Test / testOptions += Tests.Argument(TestFrameworks.ScalaTest, "-oSD"),
@@ -47,40 +32,74 @@ inThisBuild(
     initialCommands :=
       s"""|
           |import scala.util.chaining._
-          |import org.scalatest._
-          |import org.scalacheck._
           |println
           |""".stripMargin // initialize REPL
   )
 )
 
 lazy val root = (project in file("."))
-  .aggregate(core)
+  .aggregate(`exploring-scalatest`, `exploring-scalacheck`, `integration-scalatest-scalacheck`, `exploring-utest`)
   .settings(
     name := projectName,
     description := projectDescription,
     crossScalaVersions := Seq.empty
   )
 
-lazy val core = (project in file("core"))
+lazy val `exploring-scalatest` = (project in file("exploring-scalatest"))
   .dependsOn(compat213, util)
   .settings(
-    name := "core",
-    description := "My gorgeous core App",
+    name := "exploring-scalatest",
+    description := "Exploring ScalaTest",
     libraryDependencies ++= Seq(
-      shapeless,
-      fs2Core,
-      fs2Io
-    ) ++ {
-      CrossVersion.partialVersion(scalaVersion.value) match {
-        case Some((2, minor)) if minor >= 13 => Seq.empty
-        // Macro paradise not needed in 2.13. Just use scalacOption -Ymacro-annotations. See project/ScalacOptions.scala
-        case _ =>
-          Seq(compilerPlugin("org.scalamacros" %% "paradise" % "2.1.1" cross CrossVersion.full))
-      }
-    },
+      scalaTest,
+      scalactic,
+      scalaTestApp,
+      scalaMock,
+      scalaCheck,
+      scalaTestPlusCheck,
+      scalaCheckShapeless,
+      seleniumJava,
+      seleniumFirefox
+    ),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),
-    // suppress unused import warnings in the scala repl
+    console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
+  )
+
+lazy val `exploring-scalacheck` = (project in file("exploring-scalacheck"))
+  .dependsOn(compat213, util)
+  .settings(
+    name := "exploring-scalacheck",
+    description := "Exploring ScalaCheck",
+    libraryDependencies ++= Seq(
+      scalaCheck,
+      scalaCheckDatetime
+    ),
+    scalacOptions ++= scalacOptionsFor(scalaVersion.value),
+    console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
+  )
+
+lazy val `integration-scalatest-scalacheck` = (project in file("integration-scalatest-scalacheck"))
+  .dependsOn(compat213, util)
+  .settings(
+    name := "integration-scalatest-scalacheck",
+    description := "Integration of ScalaTest and ScalaCheck",
+    libraryDependencies ++= Seq(
+      scalaTest,
+      scalaCheck,
+      scalaTestPlusCheck
+    ),
+    scalacOptions ++= scalacOptionsFor(scalaVersion.value),
+    console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
+  )
+
+lazy val `exploring-utest` = (project in file("exploring-utest"))
+  .dependsOn(compat213, util)
+  .settings(
+    name := "exploring-utest",
+    description := "Exploring utest",
+    libraryDependencies ++= Seq(utest),
+    testFrameworks += new TestFramework("utest.runner.Framework"),
+    scalacOptions ++= scalacOptionsFor(scalaVersion.value),
     console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
   )
 
