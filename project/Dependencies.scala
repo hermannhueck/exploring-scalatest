@@ -2,7 +2,7 @@ import sbt._
 
 object Dependencies {
 
-  lazy val collectionCompatVersion    = "2.1.3"
+  lazy val collectionCompatVersion    = "2.1.4"
   lazy val shapelessVersion           = "2.3.3"
   lazy val catsVersion                = "2.1.1"
   lazy val catsEffectVersion          = "2.1.1"
