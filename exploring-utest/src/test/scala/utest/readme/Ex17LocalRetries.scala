@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object LocalRetries extends TestSuite {
+object Ex17LocalRetries extends TestSuite {
 
   class FlakyThing {
 

@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object SmartAsserts extends TestSuite {
+object Ex09SmartAsserts extends TestSuite {
 
   val tests = Tests {
 

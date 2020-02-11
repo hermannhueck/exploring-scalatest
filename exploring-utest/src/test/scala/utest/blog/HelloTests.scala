@@ -1,3 +1,7 @@
+/*
+  See: http://www.lihaoyi.com/post/uTesttheEssentialTestFrameworkforScala.html
+ */
+
 package utest.blog
 
 import utest._

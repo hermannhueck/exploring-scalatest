@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object TestPathTests extends TestSuite {
+object Ex16TestPathTests extends TestSuite {
 
   val tests = Tests {
 

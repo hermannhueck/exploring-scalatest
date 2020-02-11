@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object TestWithFixture extends TestSuite {
+object Ex20TestWithFixture extends TestSuite {
 
   def myTest[T](func: Int => T) = {
     val fixture = 1337          // initialize some value

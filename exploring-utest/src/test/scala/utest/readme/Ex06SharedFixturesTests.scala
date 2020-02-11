@@ -1,8 +1,13 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object SharedFixturesTests extends TestSuite {
+object Ex06SharedFixturesTests extends TestSuite {
+
   var x = 0
 
   val tests = Tests {

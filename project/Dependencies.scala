@@ -19,6 +19,7 @@ object Dependencies {
   lazy val minitestVersion            = "2.7.0"
   lazy val utestVersion               = "0.7.4"
   lazy val fansiVersion               = "0.2.9"
+  lazy val pprintVersion              = "0.5.9"
 
   lazy val collectionCompat    = "org.scala-lang.modules"     %% "scala-collection-compat"     % collectionCompatVersion
   lazy val shapeless           = "com.chuusai"                %% "shapeless"                   % shapelessVersion
@@ -47,6 +48,7 @@ object Dependencies {
   lazy val minitestLaws        = "io.monix"                   %% "minitest-laws"               % minitestVersion
   lazy val utest               = "com.lihaoyi"                %% "utest"                       % utestVersion
   lazy val fansi               = "com.lihaoyi"                %% "fansi"                       % fansiVersion
+  lazy val pprint              = "com.lihaoyi"                %% "pprint"                      % pprintVersion
 
   // compilerPlugins
   lazy val silencerVersion         = "1.4.4"

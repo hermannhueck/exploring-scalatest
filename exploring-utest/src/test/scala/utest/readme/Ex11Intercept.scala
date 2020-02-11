@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object Intercept extends TestSuite {
+object Ex11Intercept extends TestSuite {
 
   val tests = Tests {
 

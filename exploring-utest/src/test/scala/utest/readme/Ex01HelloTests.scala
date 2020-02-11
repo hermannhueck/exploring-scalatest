@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object HelloTests extends TestSuite {
+object Ex01HelloTests extends TestSuite {
 
   val tests = Tests {
     test("test1") {

@@ -105,7 +105,8 @@ lazy val `exploring-utest` = (project in file("exploring-utest"))
     description := "Exploring utest",
     libraryDependencies ++= Seq(
       utest,
-      fansi
+      fansi,
+      pprint
     ),
     testFrameworks += new TestFramework("utest.runner.Framework"),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),

@@ -1,3 +1,7 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
@@ -5,7 +9,7 @@ import utest.framework._
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext
 
-object StandaloneTests3 extends App {
+object Ex23cStandaloneTests3 extends App {
 
   val tests = Tests {
     test("test1") {

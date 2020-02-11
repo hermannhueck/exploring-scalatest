@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object StandaloneTests4 extends App {
+object Ex22dStandaloneTests4 extends App {
 
 // Run `TestSuite` object directly without using SBT, and use
 // its configuration for execution and output formatting

@@ -1,8 +1,13 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
+import utest.framework._
 
-object StandaloneTests2 extends App {
+object Ex22aStandaloneTests1 extends App {
 
   val tests = Tests {
     test("test1") {
@@ -21,9 +26,8 @@ object StandaloneTests2 extends App {
     }
   }
 
-  // Run, return results, and print streaming output with the default formatter
-  val results2 = TestRunner.runAndPrint(
-    tests,
-    "MyTestSuiteA"
-  )
+  // Run and return results
+  val results1: HTree[String, Result] = TestRunner.run(tests)
+
+  println(results1)
 }

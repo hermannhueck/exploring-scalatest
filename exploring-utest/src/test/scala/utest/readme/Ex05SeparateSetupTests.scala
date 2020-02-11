@@ -1,22 +1,15 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object BeforeAfterEachTest extends TestSuite {
-
-  var x = 0
-
-  // Both utestBeforeEach and utestAfterEach runs inside utestWrap's body callback.
-
-  override def utestBeforeEach(path: Seq[String]): Unit = {
-    println(s"on before each x: $x")
-    x = 0
-  }
-
-  override def utestAfterEach(path: Seq[String]): Unit =
-    println(s"on after each x: $x")
+object Ex05SeparateSetupTests extends TestSuite {
 
   val tests = Tests {
+    var x = 0
     test("outer1") {
       x += 1
       test("inner1") {

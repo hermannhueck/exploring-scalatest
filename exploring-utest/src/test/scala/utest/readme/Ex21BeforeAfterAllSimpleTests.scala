@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object BeforeAfterAllSimpleTests extends TestSuite {
+object Ex21BeforeAfterAllSimpleTests extends TestSuite {
 
   println("on object body, aka: before all")
 

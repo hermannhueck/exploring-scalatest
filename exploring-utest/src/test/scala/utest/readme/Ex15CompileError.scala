@@ -1,8 +1,12 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 
-object CompileError extends TestSuite {
+object Ex15CompileError extends TestSuite {
 
   val tests = Tests {
 

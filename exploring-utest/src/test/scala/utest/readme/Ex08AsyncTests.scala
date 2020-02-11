@@ -1,10 +1,14 @@
+/*
+  See: https://github.com/lihaoyi/utest
+ */
+
 package utest.readme
 
 import utest._
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext
 
-object AsyncTests extends TestSuite {
+object Ex08AsyncTests extends TestSuite {
 
   implicit val ec: ExecutionContext = ExecutionContext.global
 
