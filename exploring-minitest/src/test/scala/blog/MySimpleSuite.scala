@@ -26,7 +26,8 @@ object MySimpleSuite extends SimpleTestSuite {
       throw new DummyException
 
     intercept[DummyException] {
-      test()
+      val s = test()
+      println(s)
     }
   }
 

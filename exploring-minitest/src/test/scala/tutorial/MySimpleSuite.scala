@@ -23,7 +23,8 @@ object MySimpleSuite extends SimpleTestSuite {
     def test(): String = throw new DummyException
 
     intercept[DummyException] {
-      test()
+      val s = test()
+      println(s)
     }
   }
 

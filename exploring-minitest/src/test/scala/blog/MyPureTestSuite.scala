@@ -6,7 +6,6 @@ package blog
 
 import minitest.SimpleTestSuite
 import minitest.api.Asserts._
-import minitest.laws.Checkers
 import cats.effect.IO
 import org.scalacheck.{Prop, Test}
 import org.scalacheck.Prop._
