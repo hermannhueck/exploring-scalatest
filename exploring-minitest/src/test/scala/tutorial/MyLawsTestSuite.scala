@@ -1,3 +1,7 @@
+/*
+  See: https://github.com/monix/minitest
+ */
+
 package tutorial
 
 import minitest._

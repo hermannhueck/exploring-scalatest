@@ -1,3 +1,7 @@
+/*
+  See: https://alexn.org/blog/2017/11/10/minitest-no-crap-scala-library.html
+ */
+
 package blog
 
 import minitest.SimpleTestSuite
