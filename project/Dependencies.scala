@@ -4,8 +4,10 @@ object Dependencies {
 
   lazy val collectionCompatVersion    = "2.1.3"
   lazy val shapelessVersion           = "2.3.3"
-  lazy val catsVersion                = "2.1.0"
+  lazy val catsVersion                = "2.1.1"
+  lazy val catsEffectVersion          = "2.1.1"
   lazy val fs2Version                 = "2.2.2"
+  lazy val monixVersion               = "3.1.0"
   lazy val zioVersion                 = "1.0.0-RC17"
   lazy val scalaTestVersion           = "3.1.0"
   lazy val scalaMockVersion           = "4.4.0"
@@ -20,9 +22,10 @@ object Dependencies {
 
   lazy val collectionCompat    = "org.scala-lang.modules"     %% "scala-collection-compat"     % collectionCompatVersion
   lazy val shapeless           = "com.chuusai"                %% "shapeless"                   % shapelessVersion
-  lazy val catsEffect          = "org.typelevel"              %% "cats-effect"                 % catsVersion
+  lazy val catsEffect          = "org.typelevel"              %% "cats-effect"                 % catsEffectVersion
   lazy val fs2Core             = "co.fs2"                     %% "fs2-core"                    % fs2Version
   lazy val fs2Io               = "co.fs2"                     %% "fs2-io"                      % fs2Version
+  lazy val monixExecution      = "io.monix"                   %% "monix-execution"             % monixVersion
   lazy val zio                 = "dev.zio"                    %% "zio"                         % zioVersion
   lazy val zioStreams          = "dev.zio"                    %% "zio-streams"                 % zioVersion
   lazy val zioTest             = "dev.zio"                    %% "zio-test"                    % zioVersion

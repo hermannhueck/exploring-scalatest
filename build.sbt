@@ -119,7 +119,9 @@ lazy val `exploring-minitest` = (project in file("exploring-minitest"))
     description := "Exploring minitest",
     libraryDependencies ++= Seq(
       minitest,
-      minitestLaws
+      minitestLaws,
+      monixExecution,
+      catsEffect
     ),
     testFrameworks += new TestFramework("minitest.runner.Framework"),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),
