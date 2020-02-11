@@ -43,7 +43,8 @@ lazy val root = (project in file("."))
     `exploring-scalacheck`,
     `integration-scalatest-scalacheck`,
     `exploring-utest`,
-    `exploring-minitest`
+    `exploring-minitest`,
+    `exploring-munit`
   )
   .settings(
     name := projectName,
@@ -126,6 +127,19 @@ lazy val `exploring-minitest` = (project in file("exploring-minitest"))
       catsEffect
     ),
     testFrameworks += new TestFramework("minitest.runner.Framework"),
+    scalacOptions ++= scalacOptionsFor(scalaVersion.value),
+    console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
+  )
+
+lazy val `exploring-munit` = (project in file("exploring-munit"))
+  .dependsOn(compat213, util)
+  .settings(
+    name := "exploring-munit",
+    description := "Exploring MUnit",
+    libraryDependencies ++= Seq(
+      munit
+    ),
+    testFrameworks += new TestFramework("munit.Framework"),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),
     console / scalacOptions := removeScalacOptionXlintUnusedForConsoleFrom(scalacOptions.value)
   )
