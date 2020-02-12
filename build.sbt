@@ -137,7 +137,8 @@ lazy val `exploring-munit` = (project in file("exploring-munit"))
     name := "exploring-munit",
     description := "Exploring MUnit",
     libraryDependencies ++= Seq(
-      munit
+      munit,
+      "com.h2database" % "h2" % "1.4.200"
     ),
     testFrameworks += new TestFramework("munit.Framework"),
     scalacOptions ++= scalacOptionsFor(scalaVersion.value),
