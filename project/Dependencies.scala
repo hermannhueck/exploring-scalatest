@@ -15,7 +15,7 @@ object Dependencies {
   lazy val scalaCheckShapelessVersion = "1.2.4"
   lazy val scalaCheckDatetimeVersion  = "0.3.2"
   lazy val seleniumVersion            = "3.141.59"
-  lazy val munitVersion               = "0.4.4"
+  lazy val munitVersion               = "0.4.5"
   lazy val minitestVersion            = "2.7.0"
   lazy val utestVersion               = "0.7.4"
   lazy val fansiVersion               = "0.2.9"
