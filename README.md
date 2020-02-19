@@ -1,3 +1,7 @@
-# Exploring scalatest
+# Exploring Test Frameworks
 
-code samples for scalactic and scalatest
+- Scalactic and ScalaTest
+- ScalaCheck
+- µTest
+- minitest
+- MUnit
