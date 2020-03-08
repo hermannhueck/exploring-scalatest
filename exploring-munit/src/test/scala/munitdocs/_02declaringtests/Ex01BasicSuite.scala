@@ -1,3 +1,4 @@
+package munitdocs
 package _02declaringtests
 
 class Ex01BasicSuite extends munit.FunSuite {

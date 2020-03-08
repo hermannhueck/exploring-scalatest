@@ -1,3 +1,4 @@
+package munitdocs
 package _03writingassertions
 
 class Ex03AssertNoDiff extends munit.FunSuite {

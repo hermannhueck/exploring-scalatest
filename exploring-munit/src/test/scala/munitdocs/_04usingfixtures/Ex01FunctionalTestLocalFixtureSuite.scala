@@ -1,3 +1,4 @@
+package munitdocs
 package _04usingfixtures
 
 import java.nio.file._

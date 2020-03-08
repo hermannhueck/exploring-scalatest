@@ -1,3 +1,4 @@
+package munitdocs
 package _02declaringtests
 
 class Ex07FailingSuite extends munit.FunSuite {

@@ -1,3 +1,4 @@
+package munitdocs
 package _02declaringtests
 
 class Ex08MyWindowsSuite extends munit.FunSuite {

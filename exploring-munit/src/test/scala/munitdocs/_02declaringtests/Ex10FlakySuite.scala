@@ -1,3 +1,4 @@
+package munitdocs
 package _02declaringtests
 
 class Ex10FlakySuite extends munit.FunSuite {

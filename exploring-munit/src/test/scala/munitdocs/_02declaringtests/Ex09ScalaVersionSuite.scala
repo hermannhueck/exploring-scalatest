@@ -1,3 +1,4 @@
+package munitdocs
 package _02declaringtests
 
 class Ex09ScalaVersionSuite extends munit.FunSuite {

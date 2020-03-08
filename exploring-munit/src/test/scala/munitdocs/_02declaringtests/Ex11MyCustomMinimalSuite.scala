@@ -1,3 +1,4 @@
+package munitdocs
 package _02declaringtests
 
 import munit._

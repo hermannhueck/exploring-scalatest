@@ -1,3 +1,4 @@
+package munitdocs
 package _02declaringtests
 
 class Ex06bHelperFunctionSuite extends munit.FunSuite {

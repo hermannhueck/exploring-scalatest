@@ -1,3 +1,4 @@
+package munitdocs
 package _01gettingstarted
 
 class MySuite extends munit.FunSuite {
