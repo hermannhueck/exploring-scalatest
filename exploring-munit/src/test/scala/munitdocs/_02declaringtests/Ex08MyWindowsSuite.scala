@@ -1,18 +1,24 @@
 package munitdocs
 package _02declaringtests
 
+import scala.concurrent._
+
 class Ex08MyWindowsSuite extends munit.FunSuite {
 
   case class Rerun(count: Int) extends munit.Tag("Rerun")
 
-  override def munitRunTest(options: munit.TestOptions, body: => Any): Any = {
+  implicit val ec: ExecutionContext = ExecutionContext.global
+
+  override def munitRunTest(options: munit.TestOptions, body: () => Future[Any]): Future[Any] = {
     val rerunCount = options
       .tags
       .collectFirst {
         case Rerun(n) => n
       }
       .getOrElse(1)
-    1.to(rerunCount).map(_ => super.munitRunTest(options, body))
+    val futures: Seq[Future[Any]] = 1.to(rerunCount).map(_ => super.munitRunTest(options, body))
+    val result: Future[Seq[Any]]  = Future.sequence(futures)
+    result
   }
 
   test("files x 10".tag(Rerun(10))) {

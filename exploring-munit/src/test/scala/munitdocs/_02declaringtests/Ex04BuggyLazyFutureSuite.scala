@@ -3,20 +3,20 @@ package _02declaringtests
 
 import scala.concurrent._
 
-class Ex04BuggyTaskSuite extends munit.FunSuite {
+class Ex04BuggyLazyFutureSuite extends munit.FunSuite {
 
-  case class Task[+T](run: () => Future[T])
+  case class LazyFuture[+T](run: () => Future[T])
 
-  object Task {
+  object LazyFuture {
 
-    def apply[T](thunk: => T)(implicit ec: ExecutionContext): Task[T] =
-      Task(() => Future(thunk))
+    def apply[T](thunk: => T)(implicit ec: ExecutionContext): LazyFuture[T] =
+      LazyFuture(() => Future(thunk))
   }
 
   implicit val ec: ExecutionContext = ExecutionContext.global
 
   test("buggy-task") {
-    Task {
+    LazyFuture {
       Thread.sleep(10)
       // WARNING: test will pass because `Task.run()` was never called
       if (true) throw new RuntimeException("BOOM!") else 42
