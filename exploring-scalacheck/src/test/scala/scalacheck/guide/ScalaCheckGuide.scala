@@ -3,6 +3,7 @@ package scalacheck.guide
 import org.scalacheck._
 import org.scalacheck.Prop._
 
+@com.github.ghik.silencer.silent("implicit numeric widening")
 object ScalaCheckGuide extends Properties("Guide") {
 
   property("ConcatLists") = forAll { (l1: List[Int], l2: List[Int]) =>

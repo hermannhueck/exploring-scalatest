@@ -8,6 +8,7 @@ import utest._
 
 object Ex04CommonCodeWithTestPath extends TestSuite {
 
+  @com.github.ghik.silencer.silent("deprecated")
   val tests = Tests {
 
     def runTestChecks()(implicit path: utest.framework.TestPath) = {

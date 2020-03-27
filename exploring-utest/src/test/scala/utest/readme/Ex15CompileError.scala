@@ -21,6 +21,7 @@ object Ex15CompileError extends TestSuite {
     }
 
     test("test3") {
+      @com.github.ghik.silencer.silent("never used")
       val x = 0
       // compileError("x + x") // does not compile
       // [error] compileError check failed to have a compilation error

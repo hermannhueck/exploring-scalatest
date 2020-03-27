@@ -14,7 +14,9 @@ object Ex12Eventually extends TestSuite {
 
     test("test1") {
 
-      implicit val retryMax      = RetryMax(300.millis)
+      @com.github.ghik.silencer.silent("never used")
+      implicit val retryMax = RetryMax(300.millis)
+      @com.github.ghik.silencer.silent("never used")
       implicit val retryInterval = RetryInterval(50.millis)
 
       val x = Seq(12)

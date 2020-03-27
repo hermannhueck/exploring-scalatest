@@ -2,6 +2,7 @@ package scalatest.guide.ch18eithervalues
 
 import org.scalatest._
 
+@com.github.ghik.silencer.silent("deprecated")
 class EitherValuesSpec extends flatspec.AnyFlatSpec with matchers.should.Matchers with EitherValues {
 
   "EitherValues" should "makes the values inside an Either directly accessible" in {

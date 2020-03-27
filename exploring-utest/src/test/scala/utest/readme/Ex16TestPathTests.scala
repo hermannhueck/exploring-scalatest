@@ -8,6 +8,7 @@ import utest._
 
 object Ex16TestPathTests extends TestSuite {
 
+  @com.github.ghik.silencer.silent("deprecated")
   val tests = Tests {
 
     "testPath" - {

@@ -6,6 +6,7 @@ package utest.readme
 
 import utest._
 
+@com.github.ghik.silencer.silent("using.*==.*will always yield false")
 object Ex09SmartAsserts extends TestSuite {
 
   val tests = Tests {

@@ -2,7 +2,6 @@ package munitdocs
 package _04usingfixtures
 
 import java.nio.file._
-import munit._
 
 class Ex02ReusableTestLocalFixtureSuite extends munit.FunSuite {
 

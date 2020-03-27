@@ -6,6 +6,7 @@ package utest.readme
 
 import utest._
 
+@com.github.ghik.silencer.silent("dead code")
 object Ex01HelloTests extends TestSuite {
 
   val tests = Tests {

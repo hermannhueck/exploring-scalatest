@@ -6,6 +6,7 @@ package utest.blog
 
 import utest._
 
+@com.github.ghik.silencer.silent("dead code")
 object SharedFixtureTests extends TestSuite {
 
   val tests = Tests {
