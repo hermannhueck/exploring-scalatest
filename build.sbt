@@ -1,11 +1,11 @@
 import Dependencies._
 import ScalacOptions._
 
-val projectName        = "exploring-scalatest"
-val projectDescription = "Exploring scalatest"
+val projectName        = "exploring-test-frameworks"
+val projectDescription = "Exploring Test Frameworks"
 val projectVersion     = "0.1.0"
 
-val scala212               = "2.12.10"
+val scala212               = "2.12.11"
 val scala213               = "2.13.1"
 val supportedScalaVersions = List(scala212, scala213)
 
@@ -138,6 +138,7 @@ lazy val `exploring-munit` = (project in file("exploring-munit"))
     description := "Exploring MUnit",
     libraryDependencies ++= Seq(
       munit,
+      munitScalaCheck,
       "com.h2database" % "h2" % "1.4.200"
     ),
     testFrameworks += new TestFramework("munit.Framework"),

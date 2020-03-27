@@ -9,17 +9,20 @@ class Ex08MyWindowsSuite extends munit.FunSuite {
 
   implicit val ec: ExecutionContext = ExecutionContext.global
 
-  override def munitRunTest(options: munit.TestOptions, body: () => Future[Any]): Future[Any] = {
-    val rerunCount = options
-      .tags
-      .collectFirst {
-        case Rerun(n) => n
+  override def munitTestTransforms = super.munitTestTransforms ++ List(
+    new TestTransform("Rerun", { test =>
+      val rerunCount = test
+        .tags
+        .collectFirst { case Rerun(n) => n }
+        .getOrElse(1)
+      if (rerunCount == 1) test
+      else {
+        test.withBody(() => {
+          Future.sequence(1.to(rerunCount).map(_ => test.body()).toList)
+        })
       }
-      .getOrElse(1)
-    val futures: Seq[Future[Any]] = 1.to(rerunCount).map(_ => super.munitRunTest(options, body))
-    val result: Future[Seq[Any]]  = Future.sequence(futures)
-    result
-  }
+    })
+  )
 
   test("files x 10".tag(Rerun(10))) {
     // will run 10 times
