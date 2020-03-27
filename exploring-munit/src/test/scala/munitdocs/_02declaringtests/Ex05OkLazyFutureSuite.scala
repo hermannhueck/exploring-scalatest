@@ -13,12 +13,11 @@ class Ex05OkLazyFutureSuite extends munit.FunSuite {
       LazyFuture(() => Future(thunk))
   }
 
-  // TODO
-  override def munitTestValue(testValue: => Any): Future[Any] =
-    super.munitTestValue(testValue) flatMap {
+  override def munitValueTransforms = super.munitValueTransforms ++ List(
+    new ValueTransform("LazyFuture", {
       case LazyFuture(run) => run()
-      case value           => Future.successful(value)
-    }
+    })
+  )
 
   implicit val ec: ExecutionContext = ExecutionContext.global
 

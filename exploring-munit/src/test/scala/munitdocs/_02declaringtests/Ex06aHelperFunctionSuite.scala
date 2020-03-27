@@ -1,6 +1,7 @@
 package munitdocs
 package _02declaringtests
 
+@com.github.ghik.silencer.silent("type was inferred to be `Any`")
 class Ex06aHelperFunctionSuite extends munit.FunSuite {
 
   def check[T](
@@ -16,5 +17,6 @@ class Ex06aHelperFunctionSuite extends munit.FunSuite {
 
   check("basic", List(1, 2), Some(1))
   check("empty", List.empty[Int], Some(1))
+  // @com.github.ghik.silencer.silent("type was inferred to be `Any`")
   check("null", List(null, 2), Some(null))
 }

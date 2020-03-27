@@ -3,7 +3,6 @@ package _04usingfixtures
 
 import java.sql.Connection
 import java.sql.DriverManager
-import munit._
 
 class Ex03ReusableSuiteLocalFixtureSuite extends munit.FunSuite {
 

@@ -49,6 +49,8 @@ object Generators extends util.App {
   genTree.sample pipe println
 
   def matrix[T](g: Gen[T]): Gen[Seq[Seq[T]]] = Gen.sized { size =>
+    @com.github.ghik.silencer.silent("deprecated")
+    @com.github.ghik.silencer.silent("implicit numeric widening")
     val side = scala.math.sqrt(size).asInstanceOf[Int]
     Gen.listOfN(side, Gen.listOfN(side, g))
   }
@@ -63,6 +65,7 @@ object Generators extends util.App {
   s"generated a List[Int] (using Gen.containerOf) ---> " pipe print
   genIntList.sample pipe println
 
+  @com.github.ghik.silencer.silent("deprecated")
   val genStringLazyList = Gen.containerOf[Stream, String](Gen.alphaStr)
   s"generated a LazyList[String] (using Gen.containerOf) ---> " pipe print
   genStringLazyList.sample.map(_.take(10)) pipe println

@@ -30,6 +30,7 @@ object CounterSpecification extends Commands {
     *  }
     *  }}}
     */
+  @com.github.ghik.silencer.silent("deprecated")
   def canCreateNewSut(newState: State, initSuts: Traversable[State], runningSuts: Traversable[Sut]): Boolean = true
 
   /** The precondition for the initial state, when no commands yet have
